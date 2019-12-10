@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
+        adb.setCancelable(false);
         AlertDialog ad=adb.create();
         ad.show();
     }
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
      * This method changes the color of the screen with combination of options of colors which were clicked
      */
     public void MIXCOLOR(View view) {
-        adb.setCancelable(false);
         adb=new AlertDialog.Builder(this);
         adb.setTitle("MIX COLOR CHOOSE");
         adb.setMultiChoiceItems(colors, null, new DialogInterface.OnMultiChoiceClickListener() {
@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
+        adb.setCancelable(false);
         AlertDialog ad=adb.create();
         ad.show();
     }
